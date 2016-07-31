@@ -1,6 +1,6 @@
 #Simple SMS Gateway - built by dOpenSource and Powered by Flowroute Messaging API
 
-The goal of this quick project is provide a simple framework for routing SMS Messages that you receive from Flowroute - We love them by the way.  Basically, we take a SMS message and route it based on "to" portion of the message.  We can route the message to one or more classes that execute logic to process the message.  We started this over the weekend and we just have two (2) route classes created:
+The goal of this quick project is provide a simple framework for routing SMS Messages that you receive from Flowroute - We love them by the way.  Basically, we take a SMS message and route it based on the "to" portion of the message.  We can route the message to one or more classes that execute logic to process the message.  We started this over the weekend and we just have two (2) route classes created:
 
 |Name | Route Class | Purpose|
 |-----|-------------|--------|
