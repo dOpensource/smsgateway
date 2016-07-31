@@ -21,4 +21,11 @@ Setup the API Gateway URL within Flowroute to point to the URL that's points to 
 
 ## Send a Test Text Message
 
-Send a test text message from one of your Flowroute DID's it doesn't matter which one because they are all SMS enabled by default once you enable the API Gateway URL.  
+The EmailRoute is configured out of the box.  You just have to give it your email address.
+
+1. vi index.php
+2. Find smsjunk@dopensource.com and replace it with your email address
+3. Save the file
+4. Send a test text message from one of your Flowroute DID's it doesn't matter which one because they are all SMS enabled by default once you enable the API Gateway URL.
+
+Have Fun...we have lots of things that we will be adding to this!  Follow us at http://twitter.com/dopensource
