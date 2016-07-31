@@ -20,3 +20,5 @@ restart/reload the httpd server
 Setup the API Gateway URL within Flowroute to point to the URL that's points to your virtual server
 
 ## Send a Test Text Message
+
+Send a test text message from one of your Flowroute DID's it doesn't matter which one because they are all SMS enabled by default once you enable the API Gateway URL.  
