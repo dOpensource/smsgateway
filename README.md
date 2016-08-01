@@ -13,12 +13,19 @@ The EmailRoute and SMSRoute is configured out of the box.  You should just have 
 ##Installation*
 
 1. Change directory to your web root (i.e. /var/www/html)
-2. Execute `git clone http://github.com:dOpensource/smsgateway.git`
+2. Execute `git clone https://github.com/dOpensource/smsgateway.git`
 3. cd smsgateway
-4. cp /conf/smsgateway.conf /etc/httpd/conf.d/
+4. Setup the Virtual Server:
+  - Apache HTTPD Server: 
+    - cp conf/smsgateway-httpd.conf /etc/httpd/conf.d/smsgateway.conf
+    - service httpd restart 
+  - Apache 2: 
+    - cp conf/smsgateway-apache2.conf /etc/apache2/sites-available/smsgateway.conf
+    - a2ensite smsgateway.conf
+    - service apache2 restart
 5. cd flowroute-messaging-php
 6. php composer.phar install
-7. service httpd restart
+7
 8. Test it by going to http://<your server>:<port>  - You should see a welcome message
 
 * Our config has the server sitting on port  9090.  You can change that if you want.  You might have to add a "Listen 9090" to your /etc/httpd/conf/httpd.conf in order to get the server to listen on a port other then 80.
