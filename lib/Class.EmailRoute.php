@@ -38,7 +38,7 @@ class EmailRoute
 	public function execute() 
 	{
 	
-	 $this->sendEmail();
+	 return $this->sendEmail();
 
 	}
 
@@ -55,7 +55,7 @@ class EmailRoute
 		if (strlen($this->EMAIL) == 0)
 		{
 	     		error_log("You need to set the email address using the setEmail() function");
-			return;
+			return FALSE;
 
 		}
 		
@@ -65,7 +65,10 @@ class EmailRoute
 		{
 			$error = "The email to $this->EMAIL failed from $this->MSG['from'] with this message: $this->MSG['body']";
 			error_log($error);
+			return FALSE;
 		}
+
+		return TRUE;
 	}
 
 }
