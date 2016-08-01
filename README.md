@@ -10,7 +10,15 @@ SMS  | SMSRoute | Will send a reply SMS message back to the person that sent the
 
 The EmailRoute and SMSRoute is configured out of the box.  You should just have to configure your email address and Flowroute Access and Secret Keys.  The instuctions below will have you receiving emails whenever someone sends you a SMS using one of your Flowroute DID's.  It will also send you a SMS reply message stating that the SMS message was received and sent via email.  Note, check your junk email if you don't receive the emails.  You will need to setup an authenticated SMTP gateway to prevent that from happening.  
 
-##Installation*
+##Pre-Requisites
+
+The following components have to be installed on your system.  The installation of this components is outside the scope of this document.
+
+1. Apache HTTPD or Apache 2
+2. PHP 
+3. Composer (https://getcomposer.org/download/)
+
+##Installation
 
 1. Change directory to your web root (i.e. /var/www/html)
 2. Execute `git clone https://github.com/dOpensource/smsgateway.git`
@@ -24,6 +32,17 @@ The EmailRoute and SMSRoute is configured out of the box.  You should just have 
     - a2ensite smsgateway.conf
     - service apache2 restart
 5. cd flowroute-messaging-php
+6. Install Composer - run these commands
+
+`php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
+php -r "if (hash_file('SHA384', 'composer-setup.php') === 'e115a8dc7871f15d853148a7fbac7da27d6c0030b848d9b3dc09e2a0388afed865e6a3d6b3c0fad45c48e2b5fc1196ae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+
+php composer-setup.php
+
+php -r "unlink('composer-setup.php');"`
+
+
 6. php composer.phar install
 8. Test it by going to http://<your server>:<port>  - You should see a welcome message
 
