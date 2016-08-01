@@ -44,7 +44,7 @@ The following components have to be installed on your system.  The installation 
 
 6. php composer.phar install
 7. service apache2 restart
-8. Test it by going to http://<your server>:<port>  - You should see a welcome message
+8. Test it by going to `http://<your server>:<port>` in your browser  - You should see a welcome message
 
 * Our config has the server sitting on port  9090.  You can change that if you want by changing the Listion directive in the smsgateway.conf file.
 
