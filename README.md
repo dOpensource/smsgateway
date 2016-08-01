@@ -32,21 +32,21 @@ The following components have to be installed on your system.  The installation 
     - a2ensite smsgateway.conf
     - service apache2 restart
 5. cd flowroute-messaging-php
-6. Install Composer - run these commands
+6. Install Composer - run each of these commands
 
-` php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+  - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
-php -r "if (hash_file('SHA384', 'composer-setup.php') === 'e115a8dc7871f15d853148a7fbac7da27d6c0030b848d9b3dc09e2a0388afed865e6a3d6b3c0fad45c48e2b5fc1196ae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+  - php -r "if (hash_file('SHA384', 'composer-setup.php') === 'e115a8dc7871f15d853148a7fbac7da27d6c0030b848d9b3dc09e2a0388afed865e6a3d6b3c0fad45c48e2b5fc1196ae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 
-php composer-setup.php
+  - php composer-setup.php
 
-php -r "unlink('composer-setup.php');" `
-
+  - php -r "unlink('composer-setup.php');" 
 
 6. php composer.phar install
+7. service apache2 restart
 8. Test it by going to http://<your server>:<port>  - You should see a welcome message
 
-* Our config has the server sitting on port  9090.  You can change that if you want.  You might have to add a "Listen 9090" to your /etc/httpd/conf/httpd.conf in order to get the server to listen on a port other then 80.
+* Our config has the server sitting on port  9090.  You can change that if you want by changing the Listion directive in the smsgateway.conf file.
 
 
 ##Setup Flowroute API Gateway URL
@@ -75,6 +75,6 @@ $SMSRoute_access_key ="43524234";
 $SMSRoute_secret_key = "253f15885fd49e4d7065a61dd7ed4ec3";
 
 3. Save the file
-4. Send a test text message from one of your Flowroute DID's. It doesn't matter which one because they are all SMS enabled by default once you enable the API Gateway URL via the Flowroute portal.  Look in the error log of the virtual server if you have any issues.  
+4. Send a test text message from one of your Flowroute DID's. It doesn't matter which one because they are all SMS enabled by default once you enable the API Gateway URL via the Flowroute portal.  You should receive an email and a confirmation text back.  Look in the error log of the virtual server if you have any issues.  
 
 Have Fun...we have lots of things that we will be adding to this!  Follow us at http://twitter.com/dopensource
