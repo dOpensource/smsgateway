@@ -34,13 +34,13 @@ The following components have to be installed on your system.  The installation 
 5. cd flowroute-messaging-php
 6. Install Composer - run these commands
 
-`php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+` php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
 php -r "if (hash_file('SHA384', 'composer-setup.php') === 'e115a8dc7871f15d853148a7fbac7da27d6c0030b848d9b3dc09e2a0388afed865e6a3d6b3c0fad45c48e2b5fc1196ae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 
 php composer-setup.php
 
-php -r "unlink('composer-setup.php');"`
+php -r "unlink('composer-setup.php');" `
 
 
 6. php composer.phar install
