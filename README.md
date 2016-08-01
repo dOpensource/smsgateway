@@ -1,6 +1,6 @@
 #Simple SMS Gateway - built by dOpenSource and Powered by Flowroute Messaging API
 
-The goal of this quick project is provide a simple framework for routing SMS Messages that you receive from Flowroute - We love them by the way.  Basically, we take a SMS message and route it based on the "to" portion of the message.  We can route the message to one or more classes that execute logic to process the message.  We started this over the weekend and we just have two (2) route classes created:
+The goal of this quick project is provide a simple framework for routing SMS Messages that you receive from Flowroute - We love them by the way!  Basically, we take a SMS message and route it based on the "to" portion of the message.  We can route the message to one or more classes that execute logic to process the message.  We started this over the weekend and we just have two (2) route classes created:
 
 |Name | Route Class | Purpose|
 |-----|-------------|--------|
@@ -23,22 +23,22 @@ The EmailRoute and SMSRoute is configured out of the box.  You should just have 
 
 ##Setup Flowroute API Gateway URL
 
-Setup the API Gateway URL within Flowroute to point to the URL that's points to your virtual server
+Setup the API Gateway URL within the Flowroute portal to point to the URL that's points to your virtual server
 
 ## Setup the EmailRoute and SMSRoute 
 
 1. vi index.php
 2.Change the following fields to reflect your email address, Flowroute Access Key and Flowroute Secret Key
 
-$EmailRoute_email = "";
+`$EmailRoute_email = "";
 $SMSRoute_access_key ="";
-$SMSRoute_secret_key = "";
+$SMSRoute_secret_key = "";`
 
 They will look something like this after you change them
 
-$EmailRoute_email = "mh@dopensource.com";
+`$EmailRoute_email = "mh@dopensource.com";
 $SMSRoute_access_key ="43524234";
-$SMSRoute_secret_key = "253f15885fd49e4d7065a61dd7ed4ec3";
+$SMSRoute_secret_key = "253f15885fd49e4d7065a61dd7ed4ec3";`
 
 3. Save the file
 4. Send a test text message from one of your Flowroute DID's. It doesn't matter which one because they are all SMS enabled by default once you enable the API Gateway URL via the Flowroute portal.
