@@ -31,13 +31,17 @@ Setup the API Gateway URL within the Flowroute portal to point to the URL that's
 2.Change the following fields to reflect your email address, Flowroute Access Key and Flowroute Secret Key
 
 `$EmailRoute_email = "";
+
 $SMSRoute_access_key ="";
+
 $SMSRoute_secret_key = "";`
 
 They will look something like this after you change them
 
 `$EmailRoute_email = "mh@dopensource.com";
+
 $SMSRoute_access_key ="43524234";
+
 $SMSRoute_secret_key = "253f15885fd49e4d7065a61dd7ed4ec3";`
 
 3. Save the file
