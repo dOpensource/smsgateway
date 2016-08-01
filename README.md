@@ -46,7 +46,7 @@ The following components have to be installed on your system.  The installation 
 7. service apache2 restart
 8. Test it by going to `http://<your server>:<port>` in your browser  - You should see a welcome message
 
-* Our config has the server sitting on port  9090.  You can change that if you want by changing the Listion directive in the smsgateway.conf file.
+* Our config has the server sitting on port  9090.  You can change that if you want by changing the Listen directive in the smsgateway.conf file.
 
 
 ##Setup Flowroute API Gateway URL
