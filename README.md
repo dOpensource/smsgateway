@@ -5,9 +5,10 @@ The goal of this quick project is provide a simple framework for routing SMS Mes
 |Name | Route Class | Purpose|
 |-----|-------------|--------|
 Ticket Creation using OSTicket | NPFERoute (name will change to reflect the Route) | To allow customers to open a support ticket by sending one of our DID's a SMS
-Email SMS | EmailRoute | This will send the message via email using a predefined email adddress
+Email  | EmailRoute | This will send the message via email using a predefined email adddress
+SMS  | SMSRoute | Will send a reply SMS message back to the person that sent the original message via the gateway.
 
-The EmailRoute is configured out of the box.  You just have to give it your email address.  The instuctions below will have you receiving emails whenever someone sends you a SMS using on of your Flowroute DID's.
+The EmailRoute and SMSRoute is configured out of the box.  You should just have to configure your email address and Flowroute Access and Secret Keys.  The instuctions below will have you receiving emails whenever someone sends you a SMS using one of your Flowroute DID's.  It will also send you a SMS reply message stating that the SMS message was received and sent via email.  Note, check your junk email if you don't receive the emails.  You will need to setup an authenticated SMTP gateway to prevent that from happening.  
 
 ##Installation
 
@@ -24,11 +25,22 @@ The EmailRoute is configured out of the box.  You just have to give it your emai
 
 Setup the API Gateway URL within Flowroute to point to the URL that's points to your virtual server
 
-## Setup the EmailRoute to use your email address
+## Setup the EmailRoute and SMSRoute 
 
 1. vi index.php
-2. Find smsjunk@dopensource.com and replace it with your email address
+2.Change the following fields to reflect your email address, Flowroute Access Key and Flowroute Secret Key
+
+$EmailRoute_email = "";
+$SMSRoute_access_key ="";
+$SMSRoute_secret_key = "";
+
+They will look something like this after you change them
+
+$EmailRoute_email = "mh@dopensource.com";
+$SMSRoute_access_key ="43524234";
+$SMSRoute_secret_key = "253f15885fd49e4d7065a61dd7ed4ec3";
+
 3. Save the file
-4. Send a test text message from one of your Flowroute DID's it doesn't matter which one because they are all SMS enabled by default once you enable the API Gateway URL.
+4. Send a test text message from one of your Flowroute DID's. It doesn't matter which one because they are all SMS enabled by default once you enable the API Gateway URL via the Flowroute portal.
 
 Have Fun...we have lots of things that we will be adding to this!  Follow us at http://twitter.com/dopensource
