@@ -25,7 +25,6 @@ The EmailRoute and SMSRoute is configured out of the box.  You should just have 
     - service apache2 restart
 5. cd flowroute-messaging-php
 6. php composer.phar install
-7
 8. Test it by going to http://<your server>:<port>  - You should see a welcome message
 
 * Our config has the server sitting on port  9090.  You can change that if you want.  You might have to add a "Listen 9090" to your /etc/httpd/conf/httpd.conf in order to get the server to listen on a port other then 80.
