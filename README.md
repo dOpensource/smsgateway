@@ -30,19 +30,19 @@ Setup the API Gateway URL within the Flowroute portal to point to the URL that's
 1. vi index.php
 2.Change the following fields to reflect your email address, Flowroute Access Key and Flowroute Secret Key
 
-`$EmailRoute_email = "";
+$EmailRoute_email = "";
 
 $SMSRoute_access_key ="";
 
-$SMSRoute_secret_key = "";`
+$SMSRoute_secret_key = "";
 
 They will look something like this after you change them
 
-`$EmailRoute_email = "mh@dopensource.com";
+$EmailRoute_email = "mh@dopensource.com";
 
 $SMSRoute_access_key ="43524234";
 
-$SMSRoute_secret_key = "253f15885fd49e4d7065a61dd7ed4ec3";`
+$SMSRoute_secret_key = "253f15885fd49e4d7065a61dd7ed4ec3";
 
 3. Save the file
 4. Send a test text message from one of your Flowroute DID's. It doesn't matter which one because they are all SMS enabled by default once you enable the API Gateway URL via the Flowroute portal.
