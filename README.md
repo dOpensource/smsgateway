@@ -13,7 +13,7 @@ The EmailRoute and SMSRoute is configured out of the box.  You should just have 
 ##Installation*
 
 1. Change directory to your web root (i.e. /var/www/html)
-2. Execute ```git clone http://github.com:dOpensource/smsgateway.git`
+2. Execute `git clone http://github.com:dOpensource/smsgateway.git`
 3. cd smsgateway
 4. cp /conf/smsgateway.conf /etc/httpd/conf.d/
 5. cd flowroute-messaging-php
