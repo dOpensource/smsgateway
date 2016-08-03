@@ -43,7 +43,11 @@ The following components have to be installed on your system.  The installation 
   - php -r "unlink('composer-setup.php');" 
 
 6. php composer.phar install
-7. service apache2 restart
+7. Restart Virtual Web Service Instance
+  - Apache HTTPD 
+    - service httpd restart
+  - Apache 2
+    - service apache2 restart
 8. Test it by going to `http://<your server>:<port>` in your browser  - You should see a welcome message
 
 * Our config has the server sitting on port  9090.  You can change that if you want by changing the Listen directive in the smsgateway.conf file.
