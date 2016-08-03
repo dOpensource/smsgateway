@@ -15,7 +15,7 @@ The EmailRoute and SMSRoute is configured out of the box.  You should just have 
 The following components have to be installed on your system.  The installation of this components is outside the scope of this document.
 
 1. Apache HTTPD or Apache 2
-2. PHP 
+2. PHP 5.4 or later (was tested with 5.4)
 3. Composer (https://getcomposer.org/download/)
 
 ##Installation
